@@ -22,9 +22,9 @@ class Service: AccessibilityService() {
 
             // Android 16-17
             if (Build.VERSION.SDK_INT >= 36) {
-                val pairNodeList = event.source!!.findAccessibilityNodeInfosByText("Pair")
+                val pairNodeList = event.source!!.findAccessibilityNodeInfosByText("pair")
                 for (pairNode in pairNodeList) {
-                    if (pairNode.text != null && pairNode.text.toString().equals("Pair", true)) {
+                    if (pairNode.text != null && pairNode.text.toString().equals("pair", true)) {
                         if (pairNode.isClickable && pairNode.isEnabled) {
                             pairNode.performAction(AccessibilityNodeInfo.ACTION_CLICK)
                             break
