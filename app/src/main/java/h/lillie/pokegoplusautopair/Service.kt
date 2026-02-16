@@ -15,7 +15,7 @@ class Service: AccessibilityService() {
 
         if (event.source != null && event.packageName == "com.android.settings" && Regex("[^A-Za-z0-9 ]").replace(event.text.toString(), "").contains("pair with pokemon go plus", true)) {
 
-            // Android 15-
+            // Android 13-15
             if (Build.VERSION.SDK_INT <= 35) {
                 val pairButtonList = event.source!!.findAccessibilityNodeInfosByViewId("android:id/button1")
                 if (pairButtonList.isNotEmpty()) {
@@ -24,7 +24,7 @@ class Service: AccessibilityService() {
                 return
             }
 
-            // Android 16+
+            // Android 16-17
             if (Build.VERSION.SDK_INT >= 36) {
                 val pairButtonList = event.source!!.findAccessibilityNodeInfosByText("Pair")
                 if (pairButtonList.isNotEmpty()) {
