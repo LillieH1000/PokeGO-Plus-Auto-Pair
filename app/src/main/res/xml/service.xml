@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<accessibility-service />
+<accessibility-service
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/service"
+    android:accessibilityEventTypes="typeWindowStateChanged"
+    android:canRetrieveWindowContent="true" />
