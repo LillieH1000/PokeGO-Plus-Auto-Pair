@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.PokeGOPlusAutoPair">
-        <activity
-            android:name=".MainActivity"
+        android:allowBackup="false"
+        android:appCategory="accessibility"
+        android:hardwareAccelerated="true"
+        android:label="PokeGO Plus Auto Pair"
+        android:largeHeap="true"
+        android:supportsRtl="false"
+        tools:ignore="DataExtractionRules,MissingApplicationIcon">
+        <service
+            android:name=".Service"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.PokeGOPlusAutoPair">
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/service" />
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
-        </activity>
+        </service>
     </application>
-
 </manifest>
