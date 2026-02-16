@@ -1,10 +1,13 @@
 [versions]
 agp = "9.0.1"
+compose = "2026.02.00"
 core = "1.17.0"
 kotlin = "2.3.10"
 lifecycle = "2.10.0"
 
 [libraries]
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose" }
+androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
 
