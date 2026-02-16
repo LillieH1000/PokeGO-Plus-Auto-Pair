@@ -1,0 +1,13 @@
+# Android Studio
+local.properties
+.idea/
+
+# Gradle
+.gradle/
+build/
+
+# macOS
+.DS_Store
+
+# Visual Studio Code
+.vscode/
