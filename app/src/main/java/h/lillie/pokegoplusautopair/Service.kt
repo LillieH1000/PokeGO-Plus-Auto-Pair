@@ -13,9 +13,9 @@ class Service: AccessibilityService() {
 
             // Android 13-15
             if (Build.VERSION.SDK_INT <= 35) {
-                val pairButtonList = event.source!!.findAccessibilityNodeInfosByViewId("android:id/button1")
-                if (pairButtonList.isNotEmpty()) {
-                    pairButtonList[0].performAction(AccessibilityNodeInfo.ACTION_CLICK)
+                val pairNodeList = event.source!!.findAccessibilityNodeInfosByViewId("android:id/button1")
+                if (pairNodeList.isNotEmpty() && pairNodeList[0].isClickable && pairNodeList[0].isEnabled) {
+                    pairNodeList[0].performAction(AccessibilityNodeInfo.ACTION_CLICK)
                 }
                 return
             }
