@@ -3,6 +3,7 @@ local.properties
 .idea/
 
 # Gradle
+gradle/gradle-daemon-jvm.properties
 .gradle/
 build/
 
