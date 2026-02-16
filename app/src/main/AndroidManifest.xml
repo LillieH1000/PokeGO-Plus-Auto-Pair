@@ -6,7 +6,7 @@
         android:allowBackup="false"
         android:appCategory="accessibility"
         android:hardwareAccelerated="true"
-        android:label="PokeGO Plus Auto Pair"
+        android:label="@string/app"
         android:largeHeap="true"
         android:supportsRtl="false"
         tools:ignore="DataExtractionRules,MissingApplicationIcon">
