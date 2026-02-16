@@ -26,9 +26,18 @@ class Service: AccessibilityService() {
 
             // Android 16-17
             if (Build.VERSION.SDK_INT >= 36) {
-                val pairButtonList = event.source!!.findAccessibilityNodeInfosByText("Pair")
-                if (pairButtonList.isNotEmpty()) {
-                    pairButtonList[1].performAction(AccessibilityNodeInfo.ACTION_CLICK)
+                val pairNodeList = event.source!!.findAccessibilityNodeInfosByText("Pair")
+                for (pairNode in pairNodeList) {
+                    if (pairNode.text != null && pairNode.text.toString().equals("Pair", ignoreCase = true)) {
+                        if (pairNode.isClickable && pairNode.isEnabled) {
+                            pairNode.performAction(AccessibilityNodeInfo.ACTION_CLICK)
+                            break
+                        }
+                        if (pairNode.parent != null && pairNode.parent.isClickable && pairNode.parent.isEnabled) {
+                            pairNode.parent.performAction(AccessibilityNodeInfo.ACTION_CLICK)
+                            break
+                        }
+                    }
                 }
                 return
             }
