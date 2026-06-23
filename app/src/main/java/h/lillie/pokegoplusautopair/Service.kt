@@ -23,6 +23,7 @@ class Service: AccessibilityService() {
             }
 
             // Android 16-17
+            @Suppress("ConstantConditions")
             if (Build.VERSION.SDK_INT >= 36) {
                 val pairNodeList = event.source!!.findAccessibilityNodeInfosByText("pair")
                 for (pairNode in pairNodeList) {
