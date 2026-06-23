@@ -1,9 +1,9 @@
 [versions]
-agp = "9.0.1"
-compose = "2026.02.00"
-core = "1.17.0"
-kotlin = "2.3.10"
-lifecycle = "2.10.0"
+android = "9.2.1"
+compose = "2026.06.00"
+core = "1.19.0"
+kotlin = "2.4.0"
+lifecycle = "2.11.0"
 
 [libraries]
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose" }
@@ -12,5 +12,5 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
+android-application = { id = "com.android.application", version.ref = "android" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
