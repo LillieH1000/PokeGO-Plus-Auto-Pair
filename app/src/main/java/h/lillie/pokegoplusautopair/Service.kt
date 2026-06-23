@@ -1,10 +1,12 @@
 package h.lillie.pokegoplusautopair
 
 import android.accessibilityservice.AccessibilityService
+import android.annotation.SuppressLint
 import android.os.Build
 import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityNodeInfo
 
+@SuppressLint("AccessibilityPolicy")
 class Service: AccessibilityService() {
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {
         if (event == null || event.packageName == null || event.source == null || event.contentChangeTypes != AccessibilityEvent.CONTENT_CHANGE_TYPE_UNDEFINED || event.className == null || event.className == "com.android.settings.bluetooth.BluetoothPairingDialog") return
