@@ -1,3 +1,6 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
@@ -7,25 +10,25 @@ android {
     namespace = "h.lillie.pokegoplusautopair"
 
     compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
+        version = release(37)
     }
 
     defaultConfig {
         applicationId = "h.lillie.pokegoplusautopair"
         minSdk = 33
-        targetSdk = 36
-        versionCode = 5
-        versionName = "1.0.0"
+        targetSdk = 37
+        versionCode = 6
+        versionName = "1.1.0"
     }
 
     buildTypes {
         debug {
             isMinifyEnabled = false
+            isDebuggable = true
         }
         release {
             isMinifyEnabled = false
+            isDebuggable = false
         }
     }
 
@@ -36,6 +39,13 @@ android {
 
     buildFeatures {
         compose = true
+    }
+}
+
+kotlin {
+    compilerOptions {
+        languageVersion = KotlinVersion.KOTLIN_2_4
+        jvmTarget = JvmTarget.JVM_25
     }
 }
 
