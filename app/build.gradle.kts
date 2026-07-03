@@ -10,14 +10,16 @@ android {
     namespace = "h.lillie.pokegoplusautopair"
 
     compileSdk {
-        version = release(37)
+        version = release(37) {
+            minorApiLevel = 1
+        }
     }
 
     defaultConfig {
         applicationId = "h.lillie.pokegoplusautopair"
         minSdk = 33
         targetSdk = 37
-        versionCode = 7
+        versionCode = 8
         versionName = "1.1.0"
     }
 
