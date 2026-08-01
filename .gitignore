@@ -1,14 +1,12 @@
 # Android Studio
 local.properties
 .idea/
+.kotlin/
 
 # Gradle
 gradle/gradle-daemon-jvm.properties
 .gradle/
 build/
-
-# Kotlin
-.kotlin/errors/
 
 # macOS
 .DS_Store
