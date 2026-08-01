@@ -21,6 +21,9 @@ android {
         targetSdk = 37
         versionCode = 8
         versionName = "1.1.0"
+        ndk {
+            abiFilters += listOf("arm64-v8a", "x86_64")
+        }
     }
 
     buildTypes {
@@ -45,6 +48,7 @@ android {
 }
 
 kotlin {
+    jvmToolchain(25)
     compilerOptions {
         languageVersion = KotlinVersion.KOTLIN_2_4
         jvmTarget = JvmTarget.JVM_25
