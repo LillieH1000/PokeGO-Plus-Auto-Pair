@@ -1,6 +1,6 @@
 [versions]
 android = "9.3.1"
-compose = "2026.06.01"
+compose = "2026.08.00"
 core = "1.19.0"
 kotlin = "2.4.10"
 lifecycle = "2.11.0"
