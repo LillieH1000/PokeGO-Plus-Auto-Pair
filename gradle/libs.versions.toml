@@ -1,8 +1,8 @@
 [versions]
-android = "9.3.1"
-compose = "2026.08.00"
+android = "9.4.0"
+compose = "2026.09.00"
 core = "1.19.0"
-kotlin = "2.4.10"
+kotlin = "2.4.20"
 lifecycle = "2.11.0"
 
 [libraries]
