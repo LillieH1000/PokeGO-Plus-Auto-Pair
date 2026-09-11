@@ -19,8 +19,8 @@ android {
         applicationId = "h.lillie.pokegoplusautopair"
         minSdk = 33
         targetSdk = 37
-        versionCode = 9
-        versionName = "1.2.0"
+        versionCode = 10
+        versionName = "1.2.1"
         ndk {
             abiFilters += listOf("arm64-v8a", "x86_64")
         }
