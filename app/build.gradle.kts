@@ -19,7 +19,7 @@ android {
         applicationId = "h.lillie.pokegoplusautopair"
         minSdk = 33
         targetSdk = 37
-        versionCode = 10
+        versionCode = 11
         versionName = "1.2.1"
         ndk {
             abiFilters += listOf("arm64-v8a", "x86_64")
@@ -56,8 +56,7 @@ kotlin {
 }
 
 dependencies {
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.runtime)
 }
