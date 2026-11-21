@@ -7,6 +7,10 @@ updates:
       interval: "daily"
     cooldown:
       default-days: 0
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
 
   - package-ecosystem: "gradle"
     directory: "/"
@@ -14,3 +18,7 @@ updates:
       interval: "daily"
     cooldown:
       default-days: 0
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
