@@ -1,5 +1,5 @@
 [versions]
-android = "9.5.2"
+android = "9.5.3"
 core = "1.19.1"
 kotlin = "2.4.21"
 lifecycle = "2.11.1"
